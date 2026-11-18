@@ -15,7 +15,7 @@ section {
     padding: clamp(1rem, 6vh, 4rem) 1rem;
 }
 
-section [hidden] {
+section[hidden] {
     display: none;
 }
 
@@ -66,6 +66,16 @@ button:focus-visible {
     margin-left: 14%;
 }
 
+#fullscreen-status {
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px  #5c3c5c;
+}
+
+#fullscreen-status:empty {
+    position: absolute;
+}
+
 .game,
 .panel {
     justify-content: center;
@@ -92,6 +102,19 @@ button:focus-visible {
 .mission {
     max-width: 28rem;
     margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home:not(.no-animation) h1 {
+        animation: title-fade 0.3s ease-out;
+    }
+}
+
+
+@keyframes title-fade {
+    from {
+        opacity: 0.5;
+    }
 }
 
 @media (max-width: 700px) {
