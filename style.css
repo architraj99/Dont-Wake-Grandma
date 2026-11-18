@@ -25,7 +25,7 @@ section [hidden] {
 }
 
 h1 {
-    width: 30%;
+    width: 38%;
     margin: 0 0 0 2%;
     font-size: clamp(2rem, 4.5vw, 5rem);
     line-height: 1;
@@ -57,18 +57,40 @@ button:focus-visible {
     outline-offset: 4px;
 }
 
-.home button {
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: min(12rem, 100%);
     align-self: center;
     margin-left: 14%;
 }
 
-.game {
+.game,
+.panel {
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.game h2 {
+.game h2,
+.panel h2 {
+    margin: 0;
+}
+
+.panel {
+    line-height: 1.5;
+}
+
+.controls {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.mission {
+    max-width: 28rem;
     margin: 0;
 }
 
@@ -79,7 +101,7 @@ button:focus-visible {
         font-size: clamp(1.75rem, 6vw, 3rem);
     }
 
-    .home button {
+    .menu{
         margin-left: 0;
     }
 }

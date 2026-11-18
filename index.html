@@ -11,11 +11,32 @@
     <main>
         <section class="home" id="home" aria-labelledby="title">
             <h1 id="title"><span>DONT WAKE</span> GRANDMA!</h1>
-            <button id="start" type="button">START GAME</button>
+            <nav class="menu" aria-label="Main menu">
+                <button id="start" type="button">START GAME</button>
+                <button id="open-help" type="button">HOW TO PLAY</button>
+                <button id="open-settings" type="button">SETTINGS</button>
+                <button id="fullscreen" type="button">FULLSCREEN</button>
+                <p id="fullscreen-status" role="status"></p>
+            </nav>
         </section>
         <section class="game" id="game" aria-labelledby="game-title" hidden>
             <h2 id="game-title">The adventure begins here.</h2>
-            <button id="back" type="button">MENU</button>
+            <button id="back" type="button">BACK TO MENU</button>
+        </section>
+        <section class="panel" id="help" aria-labelledby="help-title" hidden>
+            <h2 id="help-title">HOW TO PLAY</h2>
+            <ul class="controls">
+                <li><strong>A / D</strong> - Move</li>
+                <li><strong>S</strong> - Sneak</li>
+                <li><strong>Shift</strong> - Sprint</li>
+                <li><strong>Space</strong> - Jump</li>
+                <li><strong>E</strong> - Interact</li>
+                <li><strong>P or Esc</strong> - Pause</li>
+            </ul>
+            <p class="mission"><strong>MISSION</strong><br>
+            Sneak through the room, steal Grandma's cookies, and return without making noise.
+            </p>
+            <button id="help-back" type="button">BACK</button>
         </section>
     </main>
 </body>
